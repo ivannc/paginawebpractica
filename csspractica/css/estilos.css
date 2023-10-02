@@ -1,0 +1,110 @@
+* {
+    /* padding: 0; */
+    /* si activo el padding se pega mucho la lista del menu al borde izquierdo */
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+    height: 100%;
+}
+body, header, main, footer {
+    border: 3px solid red;
+    min-height: 50px;
+    min-width: 400px;
+    margin: 0.5rem;
+}
+/*establecer color de la barra de navegacion*/
+header {
+    background: white;
+    box-shadow: 0 0 0.5rem rgb(85 78 76 / 50%);
+}
+footer {
+    background: pink;
+}
+/*defino fondo del body y coloco tipografia*/
+body {
+    background-color: rgb(132, 133, 132);
+    font-family: Arial, Helvetica, sans-serif;
+}
+main {
+    min-height: 200px;
+    overflow: auto;
+    background-color: antiquewhite; /*fondo del cuerpo principal de la pagina*/
+}
+/* para invocar al div que contiene a las 2 secciones, lo llamo de esta forma  */
+main > div {
+    border: 2px solid blue;
+    min-height: 180px;
+    margin: 0.5rem;
+    /*agrego luego de colocar las img*/
+    height: auto;
+    float: left;
+    width: 65%;
+}
+/* para dar estilo al aside que esta dentro del main */
+main > aside {
+    border: 2px solid blue;
+    min-height: 180px;
+    margin: 0.5rem;
+    /*agregar luego de ajustar el wigth a 65 en el main>div*/
+    min-width: 30%; /*cambio a 30% ya que el gif online no se ajustaba correctamente*/
+    float: left;
+    width: auto;
+}
+
+.secciones {
+    border: 2px solid green;
+    min-height: 50px;
+    margin: 0.5rem; /*equivale a 8px ya que 1 rem de 16px que viene por predefinido por defecto del navegador*/
+}
+/*  las secciones que tengan elementos ariticles van a recibir estos cambios especiicos  */
+.secciones article {
+    border: 2px solid purple;
+    margin: 0.5rem;
+    min-height: 20px;
+}
+/*modificacion del giff img de la primera seccion, invocando por id*/
+#gif-principal {
+    width: 100%;
+}
+/*agrega margin al headermenu asi afecta a todo adentro para el nav y el logo*/
+.header-menu {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 1rem;
+    text-decoration: none;
+}
+.header-logo {
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+/*quitar estilo de lista de la barra de navegacion*/
+.header-menu ul {
+    list-style: none;
+}
+.header-menu li {
+    float: left;
+    font-weight: 700; /*define el grosor del trazo de la letra*/
+    text-align: center;
+    /*par ajustar y alinear el menu con el logom paa que dede centrado juego con el margin*/
+    /*padding: 0.5rem;*/
+    margin: 0 0.5rem 1rem; /*aplica 0.5rem a derechoa y izquirda*/
+}
+/*para dar color y destacar al pasar el mouse por el menu*/
+.header-menu a:hover {
+    color: rgb(89, 212, 7);
+}
+/*para quitar el subrayado de las palabras que estan en el menu, el a es el hiperviinculo que esta dentro de la clase del menu*/
+.header-menu a {
+    text-decoration: none;
+}
+/*para aplicar estilo a un elemento dentro de otro elemento, para destacar la palabra*/
+.header-menu li a {
+    font-size: 1.2rem;
+}
